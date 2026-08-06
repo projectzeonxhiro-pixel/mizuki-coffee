@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>珈琲とパンの店 美豆木｜先代の焙煎と自家製パンを受け継ぐ喫茶｜提案用ページ</title>
+<meta name="description" content="先代から受け継いだ自家焙煎コーヒーと、パン職人の技術を生かした自家製パンを一緒に楽しめる喫茶「美豆木」。医王石の遠赤外線焙煎とこだわりの手作りメニューをご紹介する提案用ページです。">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#5b6b52">
+<style>
+  :root{
+    --color-primary:#2c2117;
+    --color-secondary:#faf6ee;
+    --color-accent:#8a4a2a;
+    --color-stone:#5b6b52;
+    --color-background:#f6f1e6;
+    --color-surface:#efe6d5;
+    --color-proposal:#e7ede3;
+    --color-text:#2c2117;
+    --color-muted:#6b5d4e;
+    --color-border:#ddd0b8;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    margin:0;
+    background-color:var(--color-background);
+    background-image:radial-gradient(circle at 1px 1px, rgba(44,33,23,.07) 1px, transparent 0);
+    background-size:24px 24px;
+    color:var(--color-text);
+    font-family:"Yu Gothic","Hiragino Kaku Gothic ProN","メイリオ",sans-serif;
+    font-size:16px;
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+
+  img{ max-width:100%; height:auto; display:block; }
+
+  a{ color:var(--color-accent); }
+
+  h1,h2,h3{
+    font-family:"Yu Mincho","Hiragino Mincho ProN","游明朝",serif;
+    font-weight:600;
+    line-height:1.5;
+    margin:0 0 .6em;
+    color:var(--color-primary);
+  }
+
+  p{ margin:0 0 1em; }
+
+  .container{
+    width:100%;
+    max-width:920px;
+    margin:0 auto;
+    padding:0 clamp(14px,4vw,32px);
+  }
+
+  section{ padding:clamp(48px,9vw,96px) 0; }
+
+  .skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background:var(--color-primary);
+    color:var(--color-secondary);
+    padding:10px 16px;
+    z-index:1000;
+  }
+  .skip-link:focus{ left:14px; top:14px; }
+
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible{
+    outline:3px solid var(--color-accent);
+    outline-offset:3px;
+  }
+
+  /* ---------- proposal label ---------- */
+  .proposal-banner{
+    background:var(--color-primary);
+    color:var(--color-secondary);
+    text-align:center;
+    padding:8px 14px;
+    font-size:clamp(12px,3vw,14px);
+    line-height:1.6;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    display:flex;
+    align-items:center;
+    padding:clamp(28px,6vw,56px) 0 clamp(40px,8vw,72px);
+    background-color:var(--color-secondary);
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(90,107,82,.10) 0, transparent 45%),
+      radial-gradient(circle at 85% 75%, rgba(138,74,42,.12) 0, transparent 50%),
+      radial-gradient(circle at 1px 1px, rgba(44,33,23,.08) 1px, transparent 0);
+    background-size:auto,auto,24px 24px;
+    position:relative;
+  }
+  .hero-layout{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "text"
+      "figure"
+      "cta";
+    gap:clamp(20px,5vw,32px);
+    align-items:center;
+  }
+  .hero-text{ grid-area:text; }
+  .hero .hero-figure{ grid-area:figure; margin:0; }
+  .hero-cta{ grid-area:cta; }
+  .hero .eyebrow{
+    font-size:clamp(11px,3vw,13px);
+    letter-spacing:.18em;
+    color:var(--color-stone);
+    margin-bottom:14px;
+  }
+  .hero h1{
+    font-size:clamp(21px,6.4vw,37px);
+    letter-spacing:.02em;
+    line-height:1.45;
+    margin-bottom:.5em;
+  }
+  .hero .catch{
+    font-size:clamp(15px,3.6vw,18px);
+    color:var(--color-muted);
+    margin-bottom:0;
+    max-width:44ch;
+  }
+  .hero-cta{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    max-width:340px;
+  }
+  @media (min-width:900px){
+    .hero .container{ max-width:1120px; }
+    .hero-layout{
+      grid-template-columns:minmax(0,0.9fr) minmax(380px,1.1fr);
+      grid-template-areas:
+        "text figure"
+        "cta figure";
+      gap:clamp(32px,5vw,64px);
+    }
+    .hero .hero-figure img{ aspect-ratio:4/3; box-shadow:0 16px 40px rgba(44,33,23,.16); }
+    .hero h1{ font-size:clamp(23px,2.9vw,33px); }
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:44px;
+    padding:12px 22px;
+    border-radius:4px;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    text-align:center;
+    border:1px solid var(--color-primary);
+    transition:background-color .15s ease, color .15s ease;
+  }
+  .btn-primary{
+    background:var(--color-primary);
+    color:var(--color-secondary);
+  }
+  .btn-primary:hover{ background:#463323; }
+  .btn-outline{
+    background:transparent;
+    color:var(--color-primary);
+  }
+  .btn-outline:hover{ background:rgba(44,33,23,.06); }
+
+  /* ---------- section heading ---------- */
+  .section-eyebrow{
+    font-size:12px;
+    letter-spacing:.16em;
+    color:var(--color-stone);
+    margin-bottom:8px;
+  }
+  .section-lead{
+    color:var(--color-muted);
+    max-width:60ch;
+    margin-bottom:2em;
+  }
+
+  /* ---------- concept ---------- */
+  .concept{ background-color:var(--color-background); background-image:radial-gradient(circle at 1px 1px, rgba(44,33,23,.07) 1px, transparent 0); background-size:24px 24px; }
+  .concept blockquote{
+    margin:0;
+    padding:20px 0 20px 20px;
+    border-left:3px solid var(--color-stone);
+    font-size:clamp(16px,3.6vw,19px);
+    color:var(--color-primary);
+  }
+
+  /* ---------- strengths ---------- */
+  .strengths{ background-color:var(--color-surface); background-image:radial-gradient(circle at 1px 1px, rgba(44,33,23,.07) 1px, transparent 0); background-size:24px 24px; }
+  .card-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  @media (min-width:700px){
+    .card-grid.cols-2{ grid-template-columns:1fr 1fr; }
+  }
+  .strength-card{
+    background:var(--color-secondary);
+    border:1px solid var(--color-border);
+    border-radius:6px;
+    padding:clamp(20px,4vw,28px);
+    min-width:0;
+  }
+  .strength-card .num{
+    font-family:"Yu Mincho","Hiragino Mincho ProN","游明朝",serif;
+    font-size:13px;
+    color:var(--color-accent);
+    letter-spacing:.1em;
+    margin-bottom:.6em;
+  }
+  .strength-card h3{ font-size:clamp(17px,3.8vw,20px); }
+  .strength-card .value{
+    font-size:14px;
+    color:var(--color-muted);
+    margin-top:.8em;
+    padding-top:.8em;
+    border-top:1px dashed var(--color-border);
+  }
+
+  /* ---------- story ---------- */
+  .story{ background-color:var(--color-background); background-image:radial-gradient(circle at 1px 1px, rgba(44,33,23,.07) 1px, transparent 0); background-size:24px 24px; }
+  .story-body{ max-width:64ch; }
+  .story-body p{ margin-bottom:1.3em; }
+
+  /* ---------- featured ---------- */
+  .featured{
+    background-color:var(--color-primary);
+    background-image:radial-gradient(circle at 1px 1px, rgba(250,246,238,.06) 1px, transparent 0);
+    background-size:24px 24px;
+    color:var(--color-secondary);
+  }
+  .featured .section-eyebrow{ color:#d8c9a8; }
+  .featured .section-lead{ color:#d9cfbf; }
+  .featured-panel{
+    background:rgba(250,246,238,.06);
+    border:1px solid rgba(250,246,238,.25);
+    border-radius:8px;
+    padding:clamp(24px,5vw,40px);
+  }
+  .featured-panel .badge{
+    display:inline-block;
+    font-size:12px;
+    letter-spacing:.1em;
+    background:var(--color-accent);
+    color:var(--color-secondary);
+    padding:4px 10px;
+    border-radius:3px;
+    margin-bottom:14px;
+  }
+  .featured-panel h3{
+    color:var(--color-secondary);
+    font-size:clamp(22px,5vw,30px);
+  }
+  .featured-list{
+    list-style:none;
+    margin:1.4em 0 0;
+    padding:0;
+    display:grid;
+    gap:10px;
+  }
+  .featured-list li{
+    padding-left:1.4em;
+    position:relative;
+    font-size:15px;
+    color:#efe7d8;
+  }
+  .featured-list li::before{
+    content:"◦";
+    position:absolute;
+    left:0;
+    color:var(--color-accent);
+  }
+  .featured-cta{ margin-top:2em; display:flex; flex-wrap:wrap; gap:12px; }
+  .featured .btn-primary{ border-color:var(--color-secondary); }
+  .featured .btn-outline{
+    color:var(--color-secondary);
+    border-color:var(--color-secondary);
+  }
+  .featured .btn-outline:hover{ background:rgba(250,246,238,.1); }
+
+  /* ---------- experience ---------- */
+  .experience{ background-color:var(--color-surface); background-image:radial-gradient(circle at 1px 1px, rgba(44,33,23,.07) 1px, transparent 0); background-size:24px 24px; }
+  .exp-list{
+    display:grid;
+    gap:16px;
+  }
+  @media (min-width:700px){
+    .exp-list{ grid-template-columns:repeat(2,1fr); }
+  }
+  .exp-item{
+    background:var(--color-secondary);
+    border:1px solid var(--color-border);
+    border-radius:6px;
+    padding:20px;
+    min-width:0;
+  }
+  .exp-item h3{ font-size:16px; margin-bottom:.5em; }
+  .exp-item p{ font-size:14px; color:var(--color-muted); margin:0; }
+
+  /* ---------- prototype ---------- */
+  .prototype{
+    background-color:var(--color-proposal);
+    background-image:radial-gradient(circle at 1px 1px, rgba(44,33,23,.06) 1px, transparent 0);
+    background-size:24px 24px;
+    border-top:3px solid var(--color-stone);
+    border-bottom:3px solid var(--color-stone);
+  }
+  .proto-label{
+    display:inline-block;
+    font-size:12px;
+    letter-spacing:.14em;
+    background:var(--color-stone);
+    color:var(--color-secondary);
+    padding:5px 12px;
+    border-radius:3px;
+    margin-bottom:14px;
+  }
+  .proto-notice{
+    background:var(--color-secondary);
+    border:1px solid var(--color-stone);
+    border-radius:6px;
+    padding:14px 18px;
+    font-size:14px;
+    color:var(--color-muted);
+    margin:1.6em 0 2em;
+  }
+  .proto-meta{
+    display:grid;
+    gap:14px;
+    margin:1.6em 0 2em;
+  }
+  @media (min-width:700px){
+    .proto-meta{ grid-template-columns:repeat(3,1fr); }
+  }
+  .proto-meta div{
+    background:var(--color-secondary);
+    border:1px solid var(--color-border);
+    border-radius:6px;
+    padding:16px;
+    min-width:0;
+  }
+  .proto-meta h4{
+    font-size:13px;
+    color:var(--color-stone);
+    margin:0 0 .4em;
+    letter-spacing:.04em;
+  }
+  .proto-meta p{ font-size:14px; margin:0; }
+
+  .diagnosis-widget{
+    background:var(--color-secondary);
+    border:1px solid var(--color-border);
+    border-radius:10px;
+    padding:clamp(20px,5vw,36px);
+  }
+
+  .diag-start{ text-align:center; }
+  .diag-start p{ max-width:52ch; margin-left:auto; margin-right:auto; color:var(--color-muted); }
+
+  .diag-progress{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:1.4em;
+    font-size:13px;
+    color:var(--color-muted);
+  }
+  .diag-progress-track{
+    flex:1;
+    height:6px;
+    background:var(--color-border);
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .diag-progress-bar{
+    height:100%;
+    background:var(--color-stone);
+    width:0%;
+    transition:width .2s ease;
+  }
+
+  .diag-question h3{
+    font-size:clamp(17px,4vw,20px);
+    margin-bottom:1em;
+  }
+  .diag-options{
+    display:grid;
+    gap:10px;
+    margin-bottom:1.6em;
+  }
+  .diag-option{
+    display:block;
+    width:100%;
+    text-align:left;
+    background:var(--color-background);
+    border:2px solid var(--color-border);
+    border-radius:6px;
+    padding:14px 16px;
+    min-height:44px;
+    font-size:15px;
+    line-height:1.6;
+    color:var(--color-text);
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .diag-option:hover{ border-color:var(--color-stone); }
+  .diag-option[aria-pressed="true"]{
+    border-color:var(--color-accent);
+    background:#fbf1e8;
+    font-weight:600;
+  }
+  .diag-option[aria-pressed="true"]::before{
+    content:"✓ ";
+    color:var(--color-accent);
+  }
+
+  .diag-nav{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .diag-nav .btn{ flex:1; min-width:120px; }
+  .diag-warning{
+    color:var(--color-accent);
+    font-size:14px;
+    margin:0 0 1em;
+    min-height:1.4em;
+  }
+
+  .diag-result .result-name{
+    font-size:clamp(20px,5vw,26px);
+    margin-bottom:.3em;
+  }
+  .diag-result .result-summary{ color:var(--color-muted); }
+  .diag-result dl{
+    margin:1.6em 0;
+    display:grid;
+    gap:14px;
+  }
+  .diag-result dt{
+    font-size:13px;
+    letter-spacing:.06em;
+    color:var(--color-stone);
+    margin-bottom:.3em;
+  }
+  .diag-result dd{ margin:0; font-size:15px; }
+  .diag-result-cta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:1.6em;
+  }
+
+  [hidden]{ display:none !important; }
+
+  /* ---------- store info ---------- */
+  .store-info{ background-color:var(--color-background); background-image:radial-gradient(circle at 1px 1px, rgba(44,33,23,.07) 1px, transparent 0); background-size:24px 24px; }
+  .info-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:14px;
+  }
+  .info-list li{
+    display:grid;
+    grid-template-columns:100px 1fr;
+    gap:12px;
+    padding:14px 0;
+    border-bottom:1px solid var(--color-border);
+    font-size:15px;
+  }
+  .info-list li span.label{
+    color:var(--color-stone);
+    font-size:13px;
+    letter-spacing:.04em;
+  }
+  .info-note{
+    font-size:13px;
+    color:var(--color-muted);
+    margin-top:1.4em;
+  }
+
+  /* ---------- final cta ---------- */
+  .final-cta{
+    background-color:var(--color-surface);
+    background-image:radial-gradient(circle at 1px 1px, rgba(44,33,23,.07) 1px, transparent 0);
+    background-size:24px 24px;
+    text-align:center;
+  }
+  .final-cta .btn-group{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    max-width:340px;
+    margin:1.6em auto 0;
+  }
+
+  /* ---------- footer ---------- */
+  footer.site-footer{
+    background-color:var(--color-primary);
+    background-image:radial-gradient(circle at 1px 1px, rgba(250,246,238,.06) 1px, transparent 0);
+    background-size:24px 24px;
+    color:#cfc4b0;
+    padding:32px 0;
+    font-size:13px;
+  }
+  footer.site-footer .container{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  footer.site-footer a{ color:#e7dcc4; }
+
+  /* ---------- images ---------- */
+  .figure{ margin:0 0 1.4em; }
+  .figure img{
+    width:100%;
+    height:auto;
+    border-radius:8px;
+    object-fit:cover;
+  }
+  .figure figcaption{
+    font-size:12px;
+    color:var(--color-muted);
+    margin-top:.5em;
+  }
+  .hero-figure{
+    margin-top:clamp(28px,6vw,48px);
+    max-width:640px;
+  }
+  .hero-figure img{ aspect-ratio:16/10; border-radius:10px; }
+  .concept-figure img{ aspect-ratio:4/3; }
+  .strength-card .figure{ margin-bottom:1em; }
+  .strength-card .figure img{ aspect-ratio:4/3; }
+  .store-info-figure img{ aspect-ratio:16/9; }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ transition:none !important; animation:none !important; }
+  }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">本文へ移動</a>
+
+<!-- 提案用ラベル -->
+<div class="proposal-banner" role="note">
+  CONCEPT LP／店舗向け提案用ページ　本ページには未導入の提案が含まれます
+</div>
+
+<main id="main-content">
+
+  <!-- ファーストビュー -->
+  <section class="hero" id="hero">
+    <div class="container hero-layout">
+      <div class="hero-text">
+        <p class="eyebrow">珈琲とパンの店　美豆木（みずき）</p>
+        <h1>受け継いだ焙煎と、<br>重ねてきたパンの手仕事。</h1>
+        <p class="catch">先代から受け継いだ自家焙煎コーヒーと、パン職人としての経験を生かした自家製パンを一緒に楽しめる喫茶です。</p>
+      </div>
+      <figure class="figure hero-figure">
+        <img src="images/hero-coffee-bread.webp" alt="自家焙煎コーヒーと自家製パンを一緒に楽しむイメージ画像" fetchpriority="high">
+        <figcaption>イメージ画像</figcaption>
+      </figure>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#featured">一押しのコーヒーを見る</a>
+        <a class="btn btn-outline" href="https://x.com/coffee_mizuki" target="_blank" rel="noopener noreferrer">公式Xを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- コンセプト -->
+  <section class="concept" id="concept" aria-labelledby="concept-heading">
+    <div class="container">
+      <p class="section-eyebrow">CONCEPT</p>
+      <h2 id="concept-heading">大切にしていること</h2>
+      <figure class="figure concept-figure">
+        <img src="images/interior.webp" alt="木の梁と古い家具が落ち着いた雰囲気をつくる、美豆木の店内のイメージ画像" loading="lazy">
+        <figcaption>イメージ画像</figcaption>
+      </figure>
+      <blockquote>
+        常連のお客様の声に耳を傾けながら先代の味を守り、そこに自身のパン作りの技術を重ねて、店を少しずつ育ててきました。
+      </blockquote>
+      <p class="section-lead">
+        美豆木は、約30年続いた店を2015年に引き継ぐかたちでスタートしました。焙煎機とともに受け継いだ技術と味を土台に、コーヒーだけでなくパンやケーキ、カレーなど手作りメニューの幅を広げながら、店の時間を紡いでいます。
+      </p>
+    </div>
+  </section>
+
+  <!-- 企業・店舗の強み -->
+  <section class="strengths" id="strengths" aria-labelledby="strengths-heading">
+    <div class="container">
+      <p class="section-eyebrow">STRENGTH</p>
+      <h2 id="strengths-heading">公式情報から見える、美豆木の強み</h2>
+      <p class="section-lead">確認できる情報をもとに整理した、美豆木ならではの魅力です。</p>
+      <div class="card-grid cols-2">
+        <article class="strength-card">
+          <p class="num">01</p>
+          <figure class="figure">
+            <img src="images/bread-closeup.webp" alt="焼きたての自家製パンのイメージ画像" loading="lazy">
+            <figcaption>イメージ画像</figcaption>
+          </figure>
+          <h3>焙煎とパン作り、ふたつの技術を一つの店で</h3>
+          <p>先代から受け継いだ自家焙煎コーヒーと、パン職人としての経験を生かした自家製パンを、一緒に提供できる点が美豆木の特徴です。</p>
+          <p class="value">お客様にとっての価値：コーヒーとパン、それぞれの専門性を一度に楽しめます。</p>
+        </article>
+        <article class="strength-card">
+          <p class="num">02</p>
+          <figure class="figure">
+            <img src="images/pour-over.webp" alt="焙煎豆をハンドドリップで抽出する様子のイメージ画像" loading="lazy">
+            <figcaption>イメージ画像</figcaption>
+          </figure>
+          <h3>医王石を使った焙煎と、幅広い手作りメニュー</h3>
+          <p>医王石の遠赤外線効果を利用した焙煎に加え、ケーキやカレーなど手作りメニューを幅広く楽しめます。</p>
+          <p class="value">お客様にとっての価値：コーヒーの奥にある焙煎へのこだわりと、メニューの選択肢の広さを味わえます。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ブランドストーリー -->
+  <section class="story" id="story" aria-labelledby="story-heading">
+    <div class="container">
+      <p class="section-eyebrow">STORY</p>
+      <h2 id="story-heading">受け継いだ味を、次の形へ</h2>
+      <div class="story-body">
+        <p>創業者ご本人についての詳しい情報は確認できていませんが、現在の店主・菅野利剛さんが店を引き継いだ経緯は確認できています。</p>
+        <p>菅野さんは、後継者を募集していた約30年続く「美豆木」を見つけ、2015年に先代から店舗と焙煎技術、コーヒー豆の味を引き継ぎました。</p>
+        <p>引き継いだあとも味をそのまま守るだけでなく、常連のお客様の意見に耳を傾けながら、自身が培ってきたパン作りの技術を加えることで、店を少しずつ発展させています。</p>
+        <p>先代から続く味を土台に、いまの美豆木らしさを重ねていく。その積み重ねが、コーヒーとパンを一緒に楽しめる、いまの店の形につながっています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 一押し商品・サービス -->
+  <section class="featured" id="featured" aria-labelledby="featured-heading">
+    <div class="container">
+      <p class="section-eyebrow">FEATURED</p>
+      <h2 id="featured-heading">特に注目したい商品・サービス</h2>
+      <p class="section-lead">公式情報をもとに、美豆木の魅力が特によく伝わる一品とサービスをご紹介します。</p>
+      <div class="featured-panel">
+        <span class="badge">一押し商品</span>
+        <h3>自家焙煎ブレンドコーヒー</h3>
+        <p>先代から受け継いだ焙煎技術と味を守り続けている、店を代表する一杯です。</p>
+        <ul class="featured-list">
+          <li>医王石の遠赤外線効果を利用した焙煎で仕上げています。</li>
+          <li>先代の味を土台に、常連のお客様の声を受けながら守り続けています。</li>
+          <li>落ち着いた店内で、自家製パンやケーキと合わせてゆっくり楽しめます。</li>
+        </ul>
+        <div class="featured-cta">
+          <a class="btn btn-primary" href="#prototype">好みに合う一杯を診断してみる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 過ごし方 -->
+  <section class="experience" id="experience" aria-labelledby="experience-heading">
+    <div class="container">
+      <p class="section-eyebrow">TIME</p>
+      <h2 id="experience-heading">美豆木での過ごし方</h2>
+      <p class="section-lead">確認できる商品・サービスをもとにした、店での過ごし方のイメージです。</p>
+      <div class="exp-list">
+        <div class="exp-item">
+          <h3>コーヒーとパンをゆっくり</h3>
+          <p>自家焙煎コーヒーと自家製パンを、落ち着いた店内でゆっくり楽しめる喫茶サービスです。</p>
+        </div>
+        <div class="exp-item">
+          <h3>ケーキやカレーも一緒に</h3>
+          <p>ケーキやカレーなど、コーヒーとパン以外の手作りメニューもあわせて楽しめます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 動く新サービス試作 -->
+  <section class="prototype" id="prototype" aria-labelledby="prototype-heading">
+    <div class="container">
+      <span class="proto-label">INTERACTIVE PROTOTYPE／動く新サービス試作</span>
+      <h2 id="prototype-heading">好みに合うコーヒー診断（試作）</h2>
+      <p class="section-lead">
+        「コーヒー豆や自家製パンの種類・在庫を確認し、Xや専用フォームから取り置きできる予約サービス」「好みに合うコーヒー豆を提案する診断機能」という導入アイデアを、簡単な診断デモとして形にしました。
+      </p>
+
+      <div class="proto-meta">
+        <div>
+          <h4>対象顧客</h4>
+          <p>来店前にどのコーヒーを選ぶか迷っている方、初めて美豆木を訪れる方</p>
+        </div>
+        <div>
+          <h4>解決する課題</h4>
+          <p>メニューを前にして何を選べばよいか分からない、という入店前後の迷いを減らします</p>
+        </div>
+        <div>
+          <h4>小さく始める方法</h4>
+          <p>まずは店頭のPOPやX投稿からこの診断ページへ誘導するところから試せます</p>
+        </div>
+      </div>
+
+      <p class="proto-notice">
+        本機能は店舗運営者向けの試作デモです。現在提供中の正式サービスではありません。入力内容の保存・送信は行いません。
+      </p>
+
+      <noscript>
+        <p class="proto-notice">この試作デモの利用にはJavaScriptが必要です。JavaScriptを有効にしてから再度お試しください。店舗の情報やその他のセクションは、JavaScriptなしでも引き続きご覧いただけます。</p>
+      </noscript>
+
+      <div class="diagnosis-widget" id="diag-widget">
+
+        <!-- 開始画面 -->
+        <div class="diag-start" id="diag-start">
+          <h3>好みに合うコーヒー診断</h3>
+          <p>5つの質問に答えると、いまの気分に合う美豆木での楽しみ方が分かります。所要時間は1分ほどです。</p>
+          <button type="button" class="btn btn-primary" id="diag-begin-btn">試してみる</button>
+        </div>
+
+        <!-- 質問画面 -->
+        <div class="diag-question" id="diag-question" hidden>
+          <div class="diag-progress">
+            <span id="diag-progress-text">質問 1 / 5</span>
+            <span class="diag-progress-track"><span class="diag-progress-bar" id="diag-progress-bar"></span></span>
+          </div>
+          <h3 id="diag-q-title"></h3>
+          <div class="diag-options" id="diag-options" role="group" aria-labelledby="diag-q-title"></div>
+          <p class="diag-warning" id="diag-warning" role="alert" aria-live="polite"></p>
+          <div class="diag-nav">
+            <button type="button" class="btn btn-outline" id="diag-back-btn">戻る</button>
+            <button type="button" class="btn btn-primary" id="diag-next-btn">次へ</button>
+          </div>
+        </div>
+
+        <!-- 結果画面 -->
+        <div class="diag-result" id="diag-result" tabindex="-1" hidden aria-live="polite">
+          <p class="section-eyebrow">RESULT</p>
+          <p class="result-name" id="result-name"></p>
+          <p class="result-summary" id="result-summary"></p>
+          <dl>
+            <div>
+              <dt>この結果になった理由</dt>
+              <dd id="result-reason"></dd>
+            </div>
+            <div>
+              <dt>おすすめ候補</dt>
+              <dd id="result-recommend"></dd>
+            </div>
+            <div>
+              <dt>美豆木の強みとのつながり</dt>
+              <dd id="result-strength"></dd>
+            </div>
+          </dl>
+          <div class="diag-result-cta">
+            <a class="btn btn-primary" id="result-cta" href="#featured">一押しを見る</a>
+            <button type="button" class="btn btn-outline" id="diag-restart-btn">最初からやり直す</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 店舗情報 -->
+  <section class="store-info" id="store-info" aria-labelledby="store-info-heading">
+    <div class="container">
+      <p class="section-eyebrow">INFORMATION</p>
+      <h2 id="store-info-heading">店舗情報</h2>
+      <figure class="figure store-info-figure">
+        <img src="images/exterior.webp" alt="木の建具と灯りが目を引く、美豆木の店構えのイメージ画像" loading="lazy">
+        <figcaption>イメージ画像</figcaption>
+      </figure>
+      <ul class="info-list">
+        <li>
+          <span class="label">店舗名</span>
+          <span>珈琲とパンの店 美豆木</span>
+        </li>
+        <li>
+          <span class="label">公式X</span>
+          <span><a href="https://x.com/coffee_mizuki" target="_blank" rel="noopener noreferrer" style="overflow-wrap:anywhere;">https://x.com/coffee_mizuki</a></span>
+        </li>
+      </ul>
+      <p class="info-note">住所・営業時間・定休日などの最新情報は、店舗の公式案内をご確認ください。</p>
+    </div>
+  </section>
+
+  <!-- 最終CTA -->
+  <section class="final-cta" aria-labelledby="final-cta-heading">
+    <div class="container">
+      <h2 id="final-cta-heading">美豆木をもっと知る</h2>
+      <p class="section-lead" style="margin-left:auto;margin-right:auto;">最新の情報や日々の様子は、公式Xでご確認いただけます。</p>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="https://x.com/coffee_mizuki" target="_blank" rel="noopener noreferrer">公式Xを見る</a>
+        <a class="btn btn-outline" href="#prototype">診断を試してみる</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- footer -->
+<footer class="site-footer">
+  <div class="container">
+    <p>珈琲とパンの店 美豆木</p>
+    <p>&copy; 珈琲とパンの店 美豆木. All Rights Reserved.</p>
+    <p><a href="#hero">ページの先頭へ戻る</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- 質問データ ----
+  // bucket: R1=コクとじっくり派 / R2=酸味とさわやか派 / R3=パン派 / R4=スイーツ派 / R5=食事派
+  var QUESTIONS = [
+    {
+      id: "q1",
+      title: "今日はどんな気分ですか？",
+      options: [
+        { label: "のんびり過ごしたい", scores: { R1: 2 } },
+        { label: "さくっと一杯だけ楽しみたい", scores: { R2: 2 } },
+        { label: "誰かとおしゃべりしたい", scores: { R3: 1, R4: 1 } },
+        { label: "お腹も満たしたい", scores: { R5: 2 } }
+      ]
+    },
+    {
+      id: "q2",
+      title: "コーヒーの味わいで、どちらに惹かれますか？",
+      options: [
+        { label: "コクや苦味", scores: { R1: 2 } },
+        { label: "酸味や香り", scores: { R2: 2 } },
+        { label: "まだよく分からない、相談したい", scores: { R3: 1, R5: 1 } },
+        { label: "甘やかな香りが好き", scores: { R4: 2 } }
+      ]
+    },
+    {
+      id: "q3",
+      title: "一緒に楽しみたいものは？",
+      options: [
+        { label: "自家製パン", scores: { R3: 3 } },
+        { label: "ケーキなど甘いもの", scores: { R4: 3 } },
+        { label: "カレーなどの食事", scores: { R5: 3 } },
+        { label: "コーヒーだけで十分", scores: { R1: 1, R2: 1 } }
+      ]
+    },
+    {
+      id: "q4",
+      title: "お店で過ごす時間は？",
+      options: [
+        { label: "短時間でさっと", scores: { R2: 1, R5: 1 } },
+        { label: "長めにゆったり", scores: { R1: 1, R3: 1, R4: 1 } }
+      ]
+    },
+    {
+      id: "q5",
+      title: "コーヒーを選ぶときに重視するのは？",
+      options: [
+        { label: "定番の安心感", scores: { R1: 1 } },
+        { label: "その日の気分で選びたい", scores: { R2: 1 } },
+        { label: "お店の人と相談しながら選びたい", scores: { R3: 1, R4: 1, R5: 1 } }
+      ]
+    }
+  ];
+
+  // 同点時の優先順位
+  var PRIORITY = ["R1", "R2", "R3", "R4", "R5"];
+
+  var RESULTS = {
+    R1: {
+      name: "コクと余韻を味わう、じっくり派",
+      summary: "深みのあるコクとしっかりした味わいを、店内でゆっくり楽しみたいタイプです。",
+      reason: "コクや苦味を好み、長めにゆったり過ごしたいという回答からのおすすめです。",
+      recommend: "先代から受け継いだ焙煎技術と味を守り続けている、自家焙煎ブレンドコーヒー",
+      strength: "医王石の遠赤外線効果を利用した焙煎によるコクのある味わいと、落ち着いた店内でゆっくり過ごせる喫茶サービス。",
+      ctaLabel: "一押しのコーヒーを見る",
+      ctaHref: "#featured"
+    },
+    R2: {
+      name: "香りと軽やかさを楽しむ、さわやか派",
+      summary: "酸味や香りを楽しみながら、気軽に一杯楽しみたいタイプです。",
+      reason: "酸味や香りに惹かれ、短時間でも楽しみたいという回答からのおすすめです。",
+      recommend: "自家焙煎コーヒーの、香り豊かな一杯",
+      strength: "医王石を使った焙煎へのこだわりが生きる、香りの豊かさ。",
+      ctaLabel: "公式Xを見る",
+      ctaHref: "https://x.com/coffee_mizuki"
+    },
+    R3: {
+      name: "パンと一緒に楽しむ、パン派",
+      summary: "コーヒーと自家製パンの組み合わせを楽しみたいタイプです。",
+      reason: "パンを一緒に楽しみたい、誰かと話す時間を大切にしたいという回答からのおすすめです。",
+      recommend: "自家製パンと自家焙煎コーヒーの組み合わせ",
+      strength: "パン職人としての経験を生かした自家製パンと、自家焙煎コーヒーを一緒に提供できる点。",
+      ctaLabel: "美豆木での過ごし方を見る",
+      ctaHref: "#experience"
+    },
+    R4: {
+      name: "甘いひとときを楽しむ、スイーツ派",
+      summary: "ケーキなど甘いものと一緒に、ゆったりした時間を楽しみたいタイプです。",
+      reason: "甘いものやゆったりした時間を求める回答からのおすすめです。",
+      recommend: "手作りケーキと自家焙煎コーヒーの組み合わせ",
+      strength: "ケーキなど幅広い手作りメニューを楽しめる点。",
+      ctaLabel: "美豆木での過ごし方を見る",
+      ctaHref: "#experience"
+    },
+    R5: {
+      name: "しっかり食事も楽しむ、食事派",
+      summary: "カレーなど食事メニューとコーヒーをあわせて、しっかり楽しみたいタイプです。",
+      reason: "お腹を満たしたい、食事メニューを求める回答からのおすすめです。",
+      recommend: "カレーなど手作りメニューと自家焙煎コーヒーの組み合わせ",
+      strength: "コーヒーとパンだけでなく、カレーなど幅広い手作りメニューを楽しめる点。",
+      ctaLabel: "店舗情報を見る",
+      ctaHref: "#store-info"
+    }
+  };
+
+  var currentIndex = 0;
+  var answers = new Array(QUESTIONS.length).fill(null);
+
+  var startPanel = document.getElementById("diag-start");
+  var questionPanel = document.getElementById("diag-question");
+  var resultPanel = document.getElementById("diag-result");
+  var beginBtn = document.getElementById("diag-begin-btn");
+  var qTitle = document.getElementById("diag-q-title");
+  var optionsWrap = document.getElementById("diag-options");
+  var warningEl = document.getElementById("diag-warning");
+  var backBtn = document.getElementById("diag-back-btn");
+  var nextBtn = document.getElementById("diag-next-btn");
+  var progressText = document.getElementById("diag-progress-text");
+  var progressBar = document.getElementById("diag-progress-bar");
+  var restartBtn = document.getElementById("diag-restart-btn");
+
+  function renderQuestion(){
+    var q = QUESTIONS[currentIndex];
+    qTitle.textContent = q.title;
+    progressText.textContent = "質問 " + (currentIndex + 1) + " / " + QUESTIONS.length;
+    progressBar.style.width = Math.round(((currentIndex + 1) / QUESTIONS.length) * 100) + "%";
+    warningEl.textContent = "";
+
+    optionsWrap.innerHTML = "";
+    q.options.forEach(function(opt, i){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "diag-option";
+      b.textContent = opt.label;
+      b.setAttribute("aria-pressed", answers[currentIndex] === i ? "true" : "false");
+      b.addEventListener("click", function(){
+        answers[currentIndex] = i;
+        var buttons = optionsWrap.querySelectorAll(".diag-option");
+        buttons.forEach(function(btn2, idx2){
+          btn2.setAttribute("aria-pressed", idx2 === i ? "true" : "false");
+        });
+        warningEl.textContent = "";
+      });
+      optionsWrap.appendChild(b);
+    });
+
+    backBtn.disabled = currentIndex === 0;
+    backBtn.style.opacity = currentIndex === 0 ? "0.4" : "1";
+    nextBtn.textContent = currentIndex === QUESTIONS.length - 1 ? "結果を見る" : "次へ";
+  }
+
+  function calculateResult(){
+    var scores = { R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 };
+    answers.forEach(function(ansIndex, qIndex){
+      if(ansIndex === null) return;
+      var opt = QUESTIONS[qIndex].options[ansIndex];
+      Object.keys(opt.scores).forEach(function(key){
+        scores[key] += opt.scores[key];
+      });
+    });
+
+    var topScore = -1;
+    PRIORITY.forEach(function(key){
+      if(scores[key] > topScore) topScore = scores[key];
+    });
+    var tied = PRIORITY.filter(function(key){ return scores[key] === topScore; });
+
+    if(tied.length === 1){
+      return tied[0];
+    }
+
+    // 同点の場合は、質問3（一緒に楽しみたいもの）の回答を優先する
+    var q3Index = 2;
+    if(answers[q3Index] !== null){
+      var q3Opt = QUESTIONS[q3Index].options[answers[q3Index]];
+      var q3Best = null;
+      var q3BestScore = -1;
+      Object.keys(q3Opt.scores).forEach(function(key){
+        if(q3Opt.scores[key] > q3BestScore){
+          q3BestScore = q3Opt.scores[key];
+          q3Best = key;
+        }
+      });
+      if(q3Best && tied.indexOf(q3Best) !== -1){
+        return q3Best;
+      }
+    }
+
+    // それでも決まらない場合は既定の優先順位に従う
+    for(var i = 0; i < PRIORITY.length; i++){
+      if(tied.indexOf(PRIORITY[i]) !== -1) return PRIORITY[i];
+    }
+    return PRIORITY[0];
+  }
+
+  function showResult(){
+    var key = calculateResult();
+    var r = RESULTS[key];
+    document.getElementById("result-name").textContent = r.name;
+    document.getElementById("result-summary").textContent = r.summary;
+    document.getElementById("result-reason").textContent = r.reason;
+    document.getElementById("result-recommend").textContent = r.recommend;
+    document.getElementById("result-strength").textContent = r.strength;
+    var ctaEl = document.getElementById("result-cta");
+    ctaEl.textContent = r.ctaLabel;
+    ctaEl.setAttribute("href", r.ctaHref);
+    if(r.ctaHref.indexOf("http") === 0){
+      ctaEl.setAttribute("target", "_blank");
+      ctaEl.setAttribute("rel", "noopener noreferrer");
+    } else {
+      ctaEl.removeAttribute("target");
+      ctaEl.removeAttribute("rel");
+    }
+
+    questionPanel.hidden = true;
+    resultPanel.hidden = false;
+    resultPanel.focus && resultPanel.focus();
+  }
+
+  beginBtn.addEventListener("click", function(){
+    currentIndex = 0;
+    answers = new Array(QUESTIONS.length).fill(null);
+    startPanel.hidden = true;
+    resultPanel.hidden = true;
+    questionPanel.hidden = false;
+    renderQuestion();
+  });
+
+  nextBtn.addEventListener("click", function(){
+    if(answers[currentIndex] === null){
+      warningEl.textContent = "選択肢を一つ選んでください。";
+      return;
+    }
+    if(currentIndex < QUESTIONS.length - 1){
+      currentIndex++;
+      renderQuestion();
+    } else {
+      showResult();
+    }
+  });
+
+  backBtn.addEventListener("click", function(){
+    if(currentIndex > 0){
+      currentIndex--;
+      renderQuestion();
+    }
+  });
+
+  restartBtn.addEventListener("click", function(){
+    currentIndex = 0;
+    answers = new Array(QUESTIONS.length).fill(null);
+    resultPanel.hidden = true;
+    startPanel.hidden = false;
+  });
+
+})();
+</script>
+
+</body>
+</html>
