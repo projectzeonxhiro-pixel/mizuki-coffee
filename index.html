@@ -115,7 +115,7 @@
   .hero .hero-figure{ grid-area:figure; margin:0; }
   .hero-cta{ grid-area:cta; }
   .hero .eyebrow{
-    font-size:clamp(11px,3vw,13px);
+    font-size:clamp(12px,3vw,13px);
     letter-spacing:.18em;
     color:var(--color-stone);
     margin-bottom:14px;
@@ -244,6 +244,7 @@
     background-size:24px 24px;
     color:var(--color-secondary);
   }
+  .featured h2{ color:var(--color-secondary); }
   .featured .section-eyebrow{ color:#d8c9a8; }
   .featured .section-lead{ color:#d9cfbf; }
   .featured-panel{
@@ -354,7 +355,7 @@
     padding:16px;
     min-width:0;
   }
-  .proto-meta h4{
+  .proto-meta h3{
     font-size:13px;
     color:var(--color-stone);
     margin:0 0 .4em;
@@ -362,110 +363,7 @@
   }
   .proto-meta p{ font-size:14px; margin:0; }
 
-  .diagnosis-widget{
-    background:var(--color-secondary);
-    border:1px solid var(--color-border);
-    border-radius:10px;
-    padding:clamp(20px,5vw,36px);
-  }
-
-  .diag-start{ text-align:center; }
-  .diag-start p{ max-width:52ch; margin-left:auto; margin-right:auto; color:var(--color-muted); }
-
-  .diag-progress{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:1.4em;
-    font-size:13px;
-    color:var(--color-muted);
-  }
-  .diag-progress-track{
-    flex:1;
-    height:6px;
-    background:var(--color-border);
-    border-radius:3px;
-    overflow:hidden;
-  }
-  .diag-progress-bar{
-    height:100%;
-    background:var(--color-stone);
-    width:0%;
-    transition:width .2s ease;
-  }
-
-  .diag-question h3{
-    font-size:clamp(17px,4vw,20px);
-    margin-bottom:1em;
-  }
-  .diag-options{
-    display:grid;
-    gap:10px;
-    margin-bottom:1.6em;
-  }
-  .diag-option{
-    display:block;
-    width:100%;
-    text-align:left;
-    background:var(--color-background);
-    border:2px solid var(--color-border);
-    border-radius:6px;
-    padding:14px 16px;
-    min-height:44px;
-    font-size:15px;
-    line-height:1.6;
-    color:var(--color-text);
-    cursor:pointer;
-    font-family:inherit;
-  }
-  .diag-option:hover{ border-color:var(--color-stone); }
-  .diag-option[aria-pressed="true"]{
-    border-color:var(--color-accent);
-    background:#fbf1e8;
-    font-weight:600;
-  }
-  .diag-option[aria-pressed="true"]::before{
-    content:"✓ ";
-    color:var(--color-accent);
-  }
-
-  .diag-nav{
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    flex-wrap:wrap;
-  }
-  .diag-nav .btn{ flex:1; min-width:120px; }
-  .diag-warning{
-    color:var(--color-accent);
-    font-size:14px;
-    margin:0 0 1em;
-    min-height:1.4em;
-  }
-
-  .diag-result .result-name{
-    font-size:clamp(20px,5vw,26px);
-    margin-bottom:.3em;
-  }
-  .diag-result .result-summary{ color:var(--color-muted); }
-  .diag-result dl{
-    margin:1.6em 0;
-    display:grid;
-    gap:14px;
-  }
-  .diag-result dt{
-    font-size:13px;
-    letter-spacing:.06em;
-    color:var(--color-stone);
-    margin-bottom:.3em;
-  }
-  .diag-result dd{ margin:0; font-size:15px; }
-  .diag-result-cta{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:1.6em;
-  }
+  .proto-cta{ margin-top:2em; }
 
   [hidden]{ display:none !important; }
 
@@ -695,21 +593,21 @@
       <span class="proto-label">INTERACTIVE PROTOTYPE／動く新サービス試作</span>
       <h2 id="prototype-heading">好みに合うコーヒー診断（試作）</h2>
       <p class="section-lead">
-        「コーヒー豆や自家製パンの種類・在庫を確認し、Xや専用フォームから取り置きできる予約サービス」「好みに合うコーヒー豆を提案する診断機能」という導入アイデアを、簡単な診断デモとして形にしました。
+        「コーヒー豆や自家製パンの種類・在庫を確認し、Xや専用フォームから取り置きできる予約サービス」「好みに合うコーヒー豆を提案する診断機能」という導入アイデアです。このうち診断機能は、実際に操作できる試作版を別ページで公開しています。
       </p>
 
       <div class="proto-meta">
         <div>
-          <h4>対象顧客</h4>
+          <h3>対象顧客</h3>
           <p>来店前にどのコーヒーを選ぶか迷っている方、初めて美豆木を訪れる方</p>
         </div>
         <div>
-          <h4>解決する課題</h4>
+          <h3>解決する課題</h3>
           <p>メニューを前にして何を選べばよいか分からない、という入店前後の迷いを減らします</p>
         </div>
         <div>
-          <h4>小さく始める方法</h4>
-          <p>まずは店頭のPOPやX投稿からこの診断ページへ誘導するところから試せます</p>
+          <h3>小さく始める方法</h3>
+          <p>まずは店頭のPOPやレジ横のQRコード、X投稿からこの診断ページへ誘導するところから試せます</p>
         </div>
       </div>
 
@@ -717,59 +615,8 @@
         本機能は店舗運営者向けの試作デモです。現在提供中の正式サービスではありません。入力内容の保存・送信は行いません。
       </p>
 
-      <noscript>
-        <p class="proto-notice">この試作デモの利用にはJavaScriptが必要です。JavaScriptを有効にしてから再度お試しください。店舗の情報やその他のセクションは、JavaScriptなしでも引き続きご覧いただけます。</p>
-      </noscript>
-
-      <div class="diagnosis-widget" id="diag-widget">
-
-        <!-- 開始画面 -->
-        <div class="diag-start" id="diag-start">
-          <h3>好みに合うコーヒー診断</h3>
-          <p>5つの質問に答えると、いまの気分に合う美豆木での楽しみ方が分かります。所要時間は1分ほどです。</p>
-          <button type="button" class="btn btn-primary" id="diag-begin-btn">試してみる</button>
-        </div>
-
-        <!-- 質問画面 -->
-        <div class="diag-question" id="diag-question" hidden>
-          <div class="diag-progress">
-            <span id="diag-progress-text">質問 1 / 5</span>
-            <span class="diag-progress-track"><span class="diag-progress-bar" id="diag-progress-bar"></span></span>
-          </div>
-          <h3 id="diag-q-title"></h3>
-          <div class="diag-options" id="diag-options" role="group" aria-labelledby="diag-q-title"></div>
-          <p class="diag-warning" id="diag-warning" role="alert" aria-live="polite"></p>
-          <div class="diag-nav">
-            <button type="button" class="btn btn-outline" id="diag-back-btn">戻る</button>
-            <button type="button" class="btn btn-primary" id="diag-next-btn">次へ</button>
-          </div>
-        </div>
-
-        <!-- 結果画面 -->
-        <div class="diag-result" id="diag-result" tabindex="-1" hidden aria-live="polite">
-          <p class="section-eyebrow">RESULT</p>
-          <p class="result-name" id="result-name"></p>
-          <p class="result-summary" id="result-summary"></p>
-          <dl>
-            <div>
-              <dt>この結果になった理由</dt>
-              <dd id="result-reason"></dd>
-            </div>
-            <div>
-              <dt>おすすめ候補</dt>
-              <dd id="result-recommend"></dd>
-            </div>
-            <div>
-              <dt>美豆木の強みとのつながり</dt>
-              <dd id="result-strength"></dd>
-            </div>
-          </dl>
-          <div class="diag-result-cta">
-            <a class="btn btn-primary" id="result-cta" href="#featured">一押しを見る</a>
-            <button type="button" class="btn btn-outline" id="diag-restart-btn">最初からやり直す</button>
-          </div>
-        </div>
-
+      <div class="proto-cta">
+        <a class="btn btn-primary" href="https://coffee-diagnosis-app.netlify.app/index.html" target="_blank" rel="noopener noreferrer">コーヒー豆診断を試してみる（別ウィンドウで開きます）</a>
       </div>
     </div>
   </section>
@@ -820,265 +667,6 @@
   </div>
 </footer>
 
-<script>
-(function(){
-  "use strict";
-
-  // ---- 質問データ ----
-  // bucket: R1=コクとじっくり派 / R2=酸味とさわやか派 / R3=パン派 / R4=スイーツ派 / R5=食事派
-  var QUESTIONS = [
-    {
-      id: "q1",
-      title: "今日はどんな気分ですか？",
-      options: [
-        { label: "のんびり過ごしたい", scores: { R1: 2 } },
-        { label: "さくっと一杯だけ楽しみたい", scores: { R2: 2 } },
-        { label: "誰かとおしゃべりしたい", scores: { R3: 1, R4: 1 } },
-        { label: "お腹も満たしたい", scores: { R5: 2 } }
-      ]
-    },
-    {
-      id: "q2",
-      title: "コーヒーの味わいで、どちらに惹かれますか？",
-      options: [
-        { label: "コクや苦味", scores: { R1: 2 } },
-        { label: "酸味や香り", scores: { R2: 2 } },
-        { label: "まだよく分からない、相談したい", scores: { R3: 1, R5: 1 } },
-        { label: "甘やかな香りが好き", scores: { R4: 2 } }
-      ]
-    },
-    {
-      id: "q3",
-      title: "一緒に楽しみたいものは？",
-      options: [
-        { label: "自家製パン", scores: { R3: 3 } },
-        { label: "ケーキなど甘いもの", scores: { R4: 3 } },
-        { label: "カレーなどの食事", scores: { R5: 3 } },
-        { label: "コーヒーだけで十分", scores: { R1: 1, R2: 1 } }
-      ]
-    },
-    {
-      id: "q4",
-      title: "お店で過ごす時間は？",
-      options: [
-        { label: "短時間でさっと", scores: { R2: 1, R5: 1 } },
-        { label: "長めにゆったり", scores: { R1: 1, R3: 1, R4: 1 } }
-      ]
-    },
-    {
-      id: "q5",
-      title: "コーヒーを選ぶときに重視するのは？",
-      options: [
-        { label: "定番の安心感", scores: { R1: 1 } },
-        { label: "その日の気分で選びたい", scores: { R2: 1 } },
-        { label: "お店の人と相談しながら選びたい", scores: { R3: 1, R4: 1, R5: 1 } }
-      ]
-    }
-  ];
-
-  // 同点時の優先順位
-  var PRIORITY = ["R1", "R2", "R3", "R4", "R5"];
-
-  var RESULTS = {
-    R1: {
-      name: "コクと余韻を味わう、じっくり派",
-      summary: "深みのあるコクとしっかりした味わいを、店内でゆっくり楽しみたいタイプです。",
-      reason: "コクや苦味を好み、長めにゆったり過ごしたいという回答からのおすすめです。",
-      recommend: "先代から受け継いだ焙煎技術と味を守り続けている、自家焙煎ブレンドコーヒー",
-      strength: "医王石の遠赤外線効果を利用した焙煎によるコクのある味わいと、落ち着いた店内でゆっくり過ごせる喫茶サービス。",
-      ctaLabel: "一押しのコーヒーを見る",
-      ctaHref: "#featured"
-    },
-    R2: {
-      name: "香りと軽やかさを楽しむ、さわやか派",
-      summary: "酸味や香りを楽しみながら、気軽に一杯楽しみたいタイプです。",
-      reason: "酸味や香りに惹かれ、短時間でも楽しみたいという回答からのおすすめです。",
-      recommend: "自家焙煎コーヒーの、香り豊かな一杯",
-      strength: "医王石を使った焙煎へのこだわりが生きる、香りの豊かさ。",
-      ctaLabel: "公式Xを見る",
-      ctaHref: "https://x.com/coffee_mizuki"
-    },
-    R3: {
-      name: "パンと一緒に楽しむ、パン派",
-      summary: "コーヒーと自家製パンの組み合わせを楽しみたいタイプです。",
-      reason: "パンを一緒に楽しみたい、誰かと話す時間を大切にしたいという回答からのおすすめです。",
-      recommend: "自家製パンと自家焙煎コーヒーの組み合わせ",
-      strength: "パン職人としての経験を生かした自家製パンと、自家焙煎コーヒーを一緒に提供できる点。",
-      ctaLabel: "美豆木での過ごし方を見る",
-      ctaHref: "#experience"
-    },
-    R4: {
-      name: "甘いひとときを楽しむ、スイーツ派",
-      summary: "ケーキなど甘いものと一緒に、ゆったりした時間を楽しみたいタイプです。",
-      reason: "甘いものやゆったりした時間を求める回答からのおすすめです。",
-      recommend: "手作りケーキと自家焙煎コーヒーの組み合わせ",
-      strength: "ケーキなど幅広い手作りメニューを楽しめる点。",
-      ctaLabel: "美豆木での過ごし方を見る",
-      ctaHref: "#experience"
-    },
-    R5: {
-      name: "しっかり食事も楽しむ、食事派",
-      summary: "カレーなど食事メニューとコーヒーをあわせて、しっかり楽しみたいタイプです。",
-      reason: "お腹を満たしたい、食事メニューを求める回答からのおすすめです。",
-      recommend: "カレーなど手作りメニューと自家焙煎コーヒーの組み合わせ",
-      strength: "コーヒーとパンだけでなく、カレーなど幅広い手作りメニューを楽しめる点。",
-      ctaLabel: "店舗情報を見る",
-      ctaHref: "#store-info"
-    }
-  };
-
-  var currentIndex = 0;
-  var answers = new Array(QUESTIONS.length).fill(null);
-
-  var startPanel = document.getElementById("diag-start");
-  var questionPanel = document.getElementById("diag-question");
-  var resultPanel = document.getElementById("diag-result");
-  var beginBtn = document.getElementById("diag-begin-btn");
-  var qTitle = document.getElementById("diag-q-title");
-  var optionsWrap = document.getElementById("diag-options");
-  var warningEl = document.getElementById("diag-warning");
-  var backBtn = document.getElementById("diag-back-btn");
-  var nextBtn = document.getElementById("diag-next-btn");
-  var progressText = document.getElementById("diag-progress-text");
-  var progressBar = document.getElementById("diag-progress-bar");
-  var restartBtn = document.getElementById("diag-restart-btn");
-
-  function renderQuestion(){
-    var q = QUESTIONS[currentIndex];
-    qTitle.textContent = q.title;
-    progressText.textContent = "質問 " + (currentIndex + 1) + " / " + QUESTIONS.length;
-    progressBar.style.width = Math.round(((currentIndex + 1) / QUESTIONS.length) * 100) + "%";
-    warningEl.textContent = "";
-
-    optionsWrap.innerHTML = "";
-    q.options.forEach(function(opt, i){
-      var b = document.createElement("button");
-      b.type = "button";
-      b.className = "diag-option";
-      b.textContent = opt.label;
-      b.setAttribute("aria-pressed", answers[currentIndex] === i ? "true" : "false");
-      b.addEventListener("click", function(){
-        answers[currentIndex] = i;
-        var buttons = optionsWrap.querySelectorAll(".diag-option");
-        buttons.forEach(function(btn2, idx2){
-          btn2.setAttribute("aria-pressed", idx2 === i ? "true" : "false");
-        });
-        warningEl.textContent = "";
-      });
-      optionsWrap.appendChild(b);
-    });
-
-    backBtn.disabled = currentIndex === 0;
-    backBtn.style.opacity = currentIndex === 0 ? "0.4" : "1";
-    nextBtn.textContent = currentIndex === QUESTIONS.length - 1 ? "結果を見る" : "次へ";
-  }
-
-  function calculateResult(){
-    var scores = { R1: 0, R2: 0, R3: 0, R4: 0, R5: 0 };
-    answers.forEach(function(ansIndex, qIndex){
-      if(ansIndex === null) return;
-      var opt = QUESTIONS[qIndex].options[ansIndex];
-      Object.keys(opt.scores).forEach(function(key){
-        scores[key] += opt.scores[key];
-      });
-    });
-
-    var topScore = -1;
-    PRIORITY.forEach(function(key){
-      if(scores[key] > topScore) topScore = scores[key];
-    });
-    var tied = PRIORITY.filter(function(key){ return scores[key] === topScore; });
-
-    if(tied.length === 1){
-      return tied[0];
-    }
-
-    // 同点の場合は、質問3（一緒に楽しみたいもの）の回答を優先する
-    var q3Index = 2;
-    if(answers[q3Index] !== null){
-      var q3Opt = QUESTIONS[q3Index].options[answers[q3Index]];
-      var q3Best = null;
-      var q3BestScore = -1;
-      Object.keys(q3Opt.scores).forEach(function(key){
-        if(q3Opt.scores[key] > q3BestScore){
-          q3BestScore = q3Opt.scores[key];
-          q3Best = key;
-        }
-      });
-      if(q3Best && tied.indexOf(q3Best) !== -1){
-        return q3Best;
-      }
-    }
-
-    // それでも決まらない場合は既定の優先順位に従う
-    for(var i = 0; i < PRIORITY.length; i++){
-      if(tied.indexOf(PRIORITY[i]) !== -1) return PRIORITY[i];
-    }
-    return PRIORITY[0];
-  }
-
-  function showResult(){
-    var key = calculateResult();
-    var r = RESULTS[key];
-    document.getElementById("result-name").textContent = r.name;
-    document.getElementById("result-summary").textContent = r.summary;
-    document.getElementById("result-reason").textContent = r.reason;
-    document.getElementById("result-recommend").textContent = r.recommend;
-    document.getElementById("result-strength").textContent = r.strength;
-    var ctaEl = document.getElementById("result-cta");
-    ctaEl.textContent = r.ctaLabel;
-    ctaEl.setAttribute("href", r.ctaHref);
-    if(r.ctaHref.indexOf("http") === 0){
-      ctaEl.setAttribute("target", "_blank");
-      ctaEl.setAttribute("rel", "noopener noreferrer");
-    } else {
-      ctaEl.removeAttribute("target");
-      ctaEl.removeAttribute("rel");
-    }
-
-    questionPanel.hidden = true;
-    resultPanel.hidden = false;
-    resultPanel.focus && resultPanel.focus();
-  }
-
-  beginBtn.addEventListener("click", function(){
-    currentIndex = 0;
-    answers = new Array(QUESTIONS.length).fill(null);
-    startPanel.hidden = true;
-    resultPanel.hidden = true;
-    questionPanel.hidden = false;
-    renderQuestion();
-  });
-
-  nextBtn.addEventListener("click", function(){
-    if(answers[currentIndex] === null){
-      warningEl.textContent = "選択肢を一つ選んでください。";
-      return;
-    }
-    if(currentIndex < QUESTIONS.length - 1){
-      currentIndex++;
-      renderQuestion();
-    } else {
-      showResult();
-    }
-  });
-
-  backBtn.addEventListener("click", function(){
-    if(currentIndex > 0){
-      currentIndex--;
-      renderQuestion();
-    }
-  });
-
-  restartBtn.addEventListener("click", function(){
-    currentIndex = 0;
-    answers = new Array(QUESTIONS.length).fill(null);
-    resultPanel.hidden = true;
-    startPanel.hidden = false;
-  });
-
-})();
-</script>
 
 </body>
 </html>
