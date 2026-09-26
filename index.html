@@ -17,7 +17,7 @@
     --color-surface:#efe6d5;
     --color-proposal:#e7ede3;
     --color-text:#2c2117;
-    --color-muted:#6b5d4e;
+    --color-muted:#66584a;
     --color-border:#ddd0b8;
   }
 
@@ -92,13 +92,18 @@
   .hero{
     display:flex;
     align-items:center;
-    padding:clamp(28px,6vw,56px) 0 clamp(40px,8vw,72px);
-    background-color:var(--color-secondary);
+    min-height:78svh;
+    padding:clamp(48px,10vw,96px) 0;
+    /* 2026-09-26：写真をカードで見せる形から、背景に敷く形へ変えました。
+       ほかの店舗（杉本・モーニン・OLIVE CAFE・みきょう）と揃えるためです。
+       ★膜（linear-gradient）は必ず残してください。外すと白文字が読めなくなります。 */
+    background-color:var(--color-primary);
     background-image:
-      radial-gradient(circle at 15% 20%, rgba(90,107,82,.10) 0, transparent 45%),
-      radial-gradient(circle at 85% 75%, rgba(138,74,42,.12) 0, transparent 50%),
-      radial-gradient(circle at 1px 1px, rgba(44,33,23,.08) 1px, transparent 0);
-    background-size:auto,auto,24px 24px;
+      linear-gradient(170deg, rgba(30,23,16,.80) 0%, rgba(30,23,16,.72) 45%, rgba(22,17,12,.88) 100%),
+      url('images/hero-coffee-bread.webp');
+    background-size:cover;
+    background-position:center 55%;
+    color:#f6efe2;
     position:relative;
   }
   .hero-layout{
@@ -106,20 +111,38 @@
     grid-template-columns:1fr;
     grid-template-areas:
       "text"
-      "figure"
       "cta";
     gap:clamp(20px,5vw,32px);
     align-items:center;
   }
-  .hero-text{ grid-area:text; }
-  .hero .hero-figure{ grid-area:figure; margin:0; }
+  .hero-text{ grid-area:text; max-width:46ch; }
   .hero-cta{ grid-area:cta; }
   .hero .eyebrow{
     font-size:clamp(12px,3vw,13px);
     letter-spacing:.18em;
-    color:var(--color-stone);
+    color:#d9cdb8;
     margin-bottom:14px;
   }
+  .hero h1{ color:#fbf6ec; }
+  .hero .catch{ color:#eee4d3; }
+  .hero .hero-note{
+    grid-area:note;
+    font-size:12px;
+    color:#d3c7b3;
+    margin:14px 0 0;
+  }
+  .hero .btn-primary{
+    /* 暗い背景に濃い茶のボタンだと同化するため、ここだけアクセント色にしています */
+    background:var(--color-accent);
+    border-color:var(--color-accent);
+    color:#fdf8f0;
+  }
+  .hero .btn-primary:hover{ background:#a05836; border-color:#a05836; }
+  .hero .btn-outline{
+    border-color:rgba(246,239,226,.8);
+    color:#f6efe2;
+  }
+  .hero .btn-outline:hover{ background:rgba(246,239,226,.16); }
   .hero h1{
     font-size:clamp(21px,6.4vw,37px);
     letter-spacing:.02em;
@@ -128,7 +151,6 @@
   }
   .hero .catch{
     font-size:clamp(15px,3.6vw,18px);
-    color:var(--color-muted);
     margin-bottom:0;
     max-width:44ch;
   }
@@ -141,13 +163,12 @@
   @media (min-width:900px){
     .hero .container{ max-width:1120px; }
     .hero-layout{
-      grid-template-columns:minmax(0,0.9fr) minmax(380px,1.1fr);
+      grid-template-columns:minmax(0,1fr);
       grid-template-areas:
-        "text figure"
-        "cta figure";
-      gap:clamp(32px,5vw,64px);
+        "text"
+        "cta";
+      gap:clamp(24px,4vw,36px);
     }
-    .hero .hero-figure img{ aspect-ratio:4/3; box-shadow:0 16px 40px rgba(44,33,23,.16); }
     .hero h1{ font-size:clamp(23px,2.9vw,33px); }
   }
 
@@ -472,13 +493,10 @@
         <h1>受け継いだ焙煎と、<br>重ねてきたパンの手仕事。</h1>
         <p class="catch">先代から受け継いだ自家焙煎コーヒーと、パン職人としての経験を生かした自家製パンを一緒に楽しめる喫茶です。</p>
       </div>
-      <figure class="figure hero-figure">
-        <img src="images/hero-coffee-bread.webp" alt="自家焙煎コーヒーと自家製パンを一緒に楽しむイメージ画像" fetchpriority="high">
-        <figcaption>イメージ画像</figcaption>
-      </figure>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#featured">一押しのコーヒーを見る</a>
         <a class="btn btn-outline" href="https://x.com/coffee_mizuki" target="_blank" rel="noopener noreferrer">公式Xを見る</a>
+        <p class="hero-note">※背景はイメージ画像です</p>
       </div>
     </div>
   </section>
